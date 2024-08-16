@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include("partials/header.ejs") %>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS for the typing animation */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .header h1 {
+            overflow: hidden; 
+            white-space: nowrap; 
+            animation: typing 3s steps(30, end) forwards; 
+            border-right: .15em solid rgb(24, 197, 206); 
+            margin: 0 auto; 
+            font-size: 2.0em; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="inner-header flex">
+            <!-- Added animation to the heading -->
+            <h1>Unleash Your Thoughts, One Post at a Time: Blog Web — Where Ideas Take Flight!</h1>
+        </div>
+        <div class="text-center"> <!-- Added class "text-center" to center-align the buttons horizontally -->
+            <button type="button" class="btn btn-info rounded-pill px-3"><a href="/log" class="nav-link px-2 text-white" style="color: white; text-decoration: none;">Login</a></button>
+            <button type="button" class="btn btn-info rounded-pill px-3"><a href="/signup" class="nav-link px-2 text-white" style="color: white; text-decoration: none;">Sign-up</a></button>
+        </div>
+        <div class="mt-3"> <!-- Added margin top class "mt-3" for space -->
+            <button class="btn btn-info rounded-pill px-3" type="button"><a href="/cblog" class="nav-link px-2 text-white">Type your own Blog</a></button>
+        </div>
+       
+        <div>
+            <!-- SVG waves -->
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255,255,255,0.3)" />
+            </g>
+            </svg>
+        </div>
+        
+        <!-- Content starts -->
+        <div class="content flex mt-5">
+            <p>By Harsh Gupta</p>
+        </div>
+        
+    </div>
+    <!-- Header ends -->
+    
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>
